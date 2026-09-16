@@ -1,0 +1,20 @@
+name: TG FileStream Bot
+runtime: go
+
+variables:
+  - name: BOT_TOKEN
+    description: "Telegram Bot Token (get from @BotFather)"
+  - name: API_ID
+    description: "Telegram API ID (from my.telegram.org)"
+  - name: API_HASH
+    description: "Telegram API Hash (from my.telegram.org)"
+  - name: SESSION_STRING
+    description: "Telegram Session String (from bot login)"
+  - name: DATABASE_URL
+    description: "Database URL (optional, for persistence)"
+
+build:
+  builder: nixpacks
+
+start:
+  cmd: "cd TG-FileStreamBot-main && ./fsb run"
